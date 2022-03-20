@@ -2,10 +2,10 @@ version: "3.7"
 
 services:
   db:
-    build:
+    build: 
       context: .
-      dockerfile: .dockerfile
-    image: github.com/hyperyuri/webapi-db
+      dockerfile: dockerfile
+    image: webapi-go/webapi-db
     container_name: webapi-mvc-db
     restart: unless-stopped
     tty: true
