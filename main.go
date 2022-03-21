@@ -1,8 +1,13 @@
 package main
 
-import "webapi-go/server"
+import (
+	"webapi-go/database"
+	"webapi-go/server"
+)
 
 func main() {
-	server := server.NewServer()
-	server.Run()
+	database.StartDB()
+	s := server.NewServer()
+
+	s.Run()
 }
